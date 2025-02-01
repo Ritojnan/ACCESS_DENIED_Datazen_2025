@@ -21,8 +21,8 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/dashboard", label: "Dashboard" },
     { href: "/news", label: "News" },
-    { href: "/resources", label: "Resources" },
-    { href: "/contact", label: "Contact" },
+    { href: "/report", label: "Report" },
+    { href: "/trading", label: "Trading" },
   ];
 
   return (
