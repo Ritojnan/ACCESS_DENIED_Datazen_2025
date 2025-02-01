@@ -1,15 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 
+import JobInsightsDisplay from "./pages/insights";
 import Landing from "./pages/landing";
-import MainLayout from "./components/layout/main-layout";
+import NewsSummary from "./pages/News_summary"
+
 
 function App() {
    return (
       <Routes>
-         <Route path="/" element={<MainLayout />}>
+      
          <Route path="/" element={<Landing />} />
-         
-         </Route>
+         <Route path="/dashboard" element={<JobInsightsDisplay />} />
+         <Route path="/NewsSummary" element={<NewsSummary />} />
       </Routes>
    );
 }
