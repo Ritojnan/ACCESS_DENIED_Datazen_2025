@@ -17,9 +17,11 @@ import {
   MessageSquareText,
   BookOpen,
 } from "lucide-react";
-import TextTicker from "@/components/text-ticker";
+import TextTicker from "@/components/landing/text-ticker";
 import { Navbar } from "@/components/layout/navbar";
 import { Button } from "@/components/ui/button"; // Assuming you have a Button component
+
+import { Footer } from "@/components/landing/footer";
 
 export default function LandingPage() {
   return (
@@ -277,6 +279,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+   <Footer/>
     </div>
   );
 }

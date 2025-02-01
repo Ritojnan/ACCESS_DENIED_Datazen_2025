@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { BottomNav } from "./bottom-nav";
 import { ModeToggle } from "@/components/theme/theme-toggle";
+import img1 from "../../assets/logo.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,8 +19,8 @@ export function Navbar() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/blog", label: "Blog" },
-    { href: "/projects", label: "Projects" },
+    { href: "/dashboard", label: "Dashboard" },
+    { href: "/news", label: "News" },
     { href: "/resources", label: "Resources" },
     { href: "/contact", label: "Contact" },
   ];
@@ -35,9 +36,17 @@ export function Navbar() {
         )}
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold">
-            Dhan AI
+          {/* Logo and Brand Name */}
+          <Link to="/" className="flex items-center gap-2">
+            <img
+              src={img1}
+              alt="Dhan AI Logo"
+              className="h-14 w-14" // Adjust size as needed
+            />
+            <span className="text-xl font-bold">Dhan AI</span>
           </Link>
+
+          {/* Navigation Links */}
           <div className="flex items-center gap-8">
             <div className="flex gap-6">
               {navItems.map((item) => (
