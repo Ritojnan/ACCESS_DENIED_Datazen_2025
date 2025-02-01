@@ -21,9 +21,9 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/dashboard", label: "Dashboard" },
     { href: "/NewsSummary", label: "News" },
-    { href: "/report", label: "Report" },
+    { href: "/stockreport", label: "Stock Report" },
+    { href: "/fraud", label: "Fraud Detection" },
     { href: "/chatbot", label: "Chatbot" },
-    { href: "/trading", label: "Trading" },
     
   ];
 
