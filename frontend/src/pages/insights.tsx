@@ -18,26 +18,28 @@ import {
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/landing/footer";
 
-interface TrendData {
+interface FinancialData {
   month: string;
-  applications: number;
-  hires: number;
+  revenue: number;
+  profit: number;
 }
 
-interface JobData {
-  role: string;
-  count: number;
+interface PortfolioData {
+  asset: string;
+  value: number;
 }
 
-interface SalaryData {
-  role: string;
-  salary: number;
+interface BusinessPerformanceData {
+  metric: string;
+  value: number;
 }
 
-interface ClosedJobsData {
+interface InvestmentData {
   month: string;
-  closed: number;
+  investments: number;
 }
 
 interface Insight {
@@ -46,72 +48,72 @@ interface Insight {
   icon: React.ComponentType;
 }
 
-const trendData: TrendData[] = [
-  { month: "Jan", applications: 1200, hires: 250 },
-  { month: "Feb", applications: 1400, hires: 280 },
-  { month: "Mar", applications: 1100, hires: 230 },
-  { month: "Apr", applications: 1600, hires: 320 },
-  { month: "May", applications: 1800, hires: 350 },
-  { month: "Jun", applications: 2000, hires: 380 },
-  { month: "Jul", applications: 2200, hires: 400 },
-  { month: "Aug", applications: 2100, hires: 390 },
-  { month: "Sep", applications: 1900, hires: 360 },
-  { month: "Oct", applications: 2300, hires: 420 },
-  { month: "Nov", applications: 2500, hires: 450 },
+const financialData: FinancialData[] = [
+  { month: "Jan", revenue: 1200000, profit: 250000 },
+  { month: "Feb", revenue: 1400000, profit: 280000 },
+  { month: "Mar", revenue: 1100000, profit: 230000 },
+  { month: "Apr", revenue: 1600000, profit: 320000 },
+  { month: "May", revenue: 1800000, profit: 350000 },
+  { month: "Jun", revenue: 2000000, profit: 380000 },
+  { month: "Jul", revenue: 2200000, profit: 400000 },
+  { month: "Aug", revenue: 2100000, profit: 390000 },
+  { month: "Sep", revenue: 1900000, profit: 360000 },
+  { month: "Oct", revenue: 2300000, profit: 420000 },
+  { month: "Nov", revenue: 2500000, profit: 450000 },
 ];
 
-const topJobsData: JobData[] = [
-  { role: "Software Engineer", count: 1200 },
-  { role: "Data Scientist", count: 800 },
-  { role: "Product Manager", count: 600 },
-  { role: "UX Designer", count: 400 },
+const portfolioData: PortfolioData[] = [
+  { asset: "Stocks", value: 1200000 },
+  { asset: "Bonds", value: 800000 },
+  { asset: "Real Estate", value: 600000 },
+  { asset: "Commodities", value: 400000 },
 ];
 
-const salaryData: SalaryData[] = [
-  { role: "AI Engineer", salary: 150000 },
-  { role: "DevOps", salary: 140000 },
-  { role: "Full Stack", salary: 130000 },
-  { role: "Mobile Dev", salary: 125000 },
+const businessPerformanceData: BusinessPerformanceData[] = [
+  { metric: "Customer Growth", value: 15 },
+  { metric: "Market Share", value: 25 },
+  { metric: "Operational Efficiency", value: 10 },
+  { metric: "Employee Satisfaction", value: 90 },
 ];
 
-const closedJobsData: ClosedJobsData[] = [
-  { month: "Jan", closed: 50 },
-  { month: "Feb", closed: 65 },
-  { month: "Mar", closed: 45 },
-  { month: "Apr", closed: 80 },
-  { month: "May", closed: 75 },
-  { month: "Jun", closed: 90 },
-  { month: "Jul", closed: 100 },
-  { month: "Aug", closed: 95 },
-  { month: "Sep", closed: 85 },
-  { month: "Oct", closed: 110 },
-  { month: "Nov", closed: 120 },
+const investmentData: InvestmentData[] = [
+  { month: "Jan", investments: 500000 },
+  { month: "Feb", investments: 650000 },
+  { month: "Mar", investments: 450000 },
+  { month: "Apr", investments: 800000 },
+  { month: "May", investments: 750000 },
+  { month: "Jun", investments: 900000 },
+  { month: "Jul", investments: 1000000 },
+  { month: "Aug", investments: 950000 },
+  { month: "Sep", investments: 850000 },
+  { month: "Oct", investments: 1100000 },
+  { month: "Nov", investments: 1200000 },
 ];
 
 const keyInsights: Insight[] = [
-  { title: "Growth Rate", description: "108% increase in applications", icon: BarChart3Icon },
-  { title: "Hiring Velocity", description: "80% growth in hiring rate", icon: LineChartIcon },
-  { title: "Market Leader", description: "Software Engineering dominates", icon: PieChartIcon },
-  { title: "Salary Trends", description: "AI roles lead compensation", icon: ActivityIcon },
+  { title: "Revenue Growth", description: "108% increase in revenue", icon: BarChart3Icon },
+  { title: "Profit Margin", description: "20% growth in profit margin", icon: LineChartIcon },
+  { title: "Portfolio Value", description: "Stocks dominate portfolio", icon: PieChartIcon },
+  { title: "Investment Trends", description: "AI startups lead investments", icon: ActivityIcon },
 ];
 
 const emergingTrends: Insight[] = [
-  { title: "Remote Work", description: "Expanding across industries", icon: LaptopIcon },
-  { title: "AI & ML", description: "Rising demand for specialists", icon: BrainIcon },
-  { title: "Soft Skills", description: "Growing importance", icon: UserIcon },
-  { title: "Freelancing", description: "Increasing opportunities", icon: HandshakeIcon },
+  { title: "Digital Transformation", description: "Expanding across industries", icon: LaptopIcon },
+  { title: "AI & ML", description: "Rising demand for AI solutions", icon: BrainIcon },
+  { title: "Sustainability", description: "Growing focus on ESG", icon: UserIcon },
+  { title: "Global Expansion", description: "Increasing international presence", icon: HandshakeIcon },
 ];
 
-export default function JobInsightsDisplay() {
+export default function BusinessFinancePortfolioDisplay() {
   const [searchQuery, setSearchQuery] = useState("");
-  const topJob = topJobsData.reduce((prev, current) => (prev.count > current.count ? prev : current));
-  const bestPaidJob = salaryData.reduce((prev, current) => (prev.salary > current.salary ? prev : current));
-  const latestClosedJobs = closedJobsData[closedJobsData.length - 1].closed;
+  const topAsset = portfolioData.reduce((prev, current) => (prev.value > current.value ? prev : current));
+  const latestInvestments = investmentData[investmentData.length - 1].investments;
 
   return (
     <div className="container mx-auto p-4 bg-gray-100 min-h-screen">
-      <div className="flex flex-col items-center gap-6 mb-8">
-        <h1 className="text-3xl font-bold text-center text-gray-800">Job Market Analytics</h1>
+      <Navbar />
+      <div className="flex flex-col items-center gap-6 mb-8 mt-10 pt-10">
+        <h1 className="text-3xl font-bold text-center text-gray-800">Business, Finance & Portfolio Analytics</h1>
         <div className="w-full max-w-md relative">
           <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
           <Input
@@ -124,75 +126,75 @@ export default function JobInsightsDisplay() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-6">
-        {/* Top Job Card */}
+        {/* Top Asset Card */}
         <Card className="bg-yellow-100 shadow-lg rounded-2xl transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-lg font-medium text-yellow-800">Top Job</CardTitle>
+            <CardTitle className="text-lg font-medium text-yellow-800">Top Asset</CardTitle>
             <div className="bg-yellow-300 rounded-full p-2">
               <BriefcaseIcon className="h-8 w-8 text-yellow-800" />
             </div>
           </CardHeader>
           <CardContent className="flex flex-col items-center">
-            <div className="text-3xl font-bold text-yellow-900 z-10">{topJob.role}</div>
-            <p className="text-sm text-yellow-700 mb-4 z-10">{topJob.count} openings</p>
+            <div className="text-3xl font-bold text-yellow-900 z-10">{topAsset.asset}</div>
+            <p className="text-sm text-yellow-700 mb-4 z-10">${topAsset.value.toLocaleString()} value</p>
             <div className="h-[200px] w-full z-20 relative bg-white p-4 rounded-lg">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={topJobsData}>
-                  <XAxis dataKey="role" />
+                <BarChart data={portfolioData}>
+                  <XAxis dataKey="asset" />
                   <YAxis />
                   <Tooltip />
-                  <Bar dataKey="count" fill="hsl(40, 95%, 50%)" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="value" fill="hsl(40, 95%, 50%)" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
           </CardContent>
         </Card>
 
-        {/* Best Paid Role Card */}
+        {/* Latest Investments Card */}
         <Card className="bg-green-100 shadow-lg rounded-2xl transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-lg font-medium text-green-800">Best Paid Role</CardTitle>
+            <CardTitle className="text-lg font-medium text-green-800">Latest Investments</CardTitle>
             <div className="bg-green-300 rounded-full p-2">
               <TrendingUpIcon className="h-8 w-8 text-green-800" />
             </div>
           </CardHeader>
           <CardContent className="flex flex-col items-center">
-            <div className="text-3xl font-bold text-green-900 z-10">{bestPaidJob.role}</div>
-            <p className="text-sm text-green-700 mb-4 z-10">${bestPaidJob.salary.toLocaleString()} per year</p>
+            <div className="text-3xl font-bold text-green-900 z-10">${latestInvestments.toLocaleString()}</div>
+            <p className="text-sm text-green-700 mb-4 z-10">
+              +${(latestInvestments - investmentData[investmentData.length - 2].investments).toLocaleString()} from last month
+            </p>
             <div className="h-[200px] w-full z-20 relative bg-white p-4 rounded-lg">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={salaryData} layout="vertical">
-                  <XAxis type="number" />
-                  <YAxis type="category" dataKey="role" />
+                <LineChart data={investmentData}>
+                  <XAxis dataKey="month" />
+                  <YAxis />
                   <Tooltip />
-                  <Bar dataKey="salary" fill="hsl(120, 95%, 35%)" radius={[0, 4, 4, 0]} />
-                </BarChart>
+                  <Line type="monotone" dataKey="investments" stroke="hsl(120, 95%, 35%)" strokeWidth={2} dot={{ r: 4 }} />
+                </LineChart>
               </ResponsiveContainer>
             </div>
           </CardContent>
         </Card>
 
-        {/* Closed Positions Card */}
+        {/* Business Performance Card */}
         <Card className="bg-pink-100 shadow-lg rounded-2xl transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-lg font-medium text-pink-800">Closed Positions</CardTitle>
+            <CardTitle className="text-lg font-medium text-pink-800">Business Performance</CardTitle>
             <div className="bg-pink-300 rounded-full p-2">
               <ArrowUpIcon className="h-8 w-8 text-pink-800" />
             </div>
           </CardHeader>
           <CardContent className="flex flex-col items-center">
-            <div className="text-3xl font-bold text-pink-900 z-10">{latestClosedJobs}</div>
-            <p className="text-sm text-pink-700 mb-4 z-10">
-              +{latestClosedJobs - closedJobsData[closedJobsData.length - 2].closed} from last month
-            </p>
+            <div className="text-3xl font-bold text-pink-900 z-10">{businessPerformanceData[0].value}%</div>
+            <p className="text-sm text-pink-700 mb-4 z-10">Customer Growth</p>
             <div className="h-[200px] w-full z-20 relative bg-white p-4 rounded-lg">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={closedJobsData}>
-                  <XAxis dataKey="month" />
-                  <YAxis />
+                <BarChart data={businessPerformanceData} layout="vertical">
+                  <XAxis type="number" />
+                  <YAxis type="category" dataKey="metric" />
                   <Tooltip />
-                  <Line type="monotone" dataKey="closed" stroke="hsl(330, 95%, 60%)" strokeWidth={2} dot={{ r: 4 }} />
-                </LineChart>
+                  <Bar dataKey="value" fill="hsl(330, 95%, 60%)" radius={[0, 4, 4, 0]} />
+                </BarChart>
               </ResponsiveContainer>
             </div>
           </CardContent>
@@ -200,28 +202,28 @@ export default function JobInsightsDisplay() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[minmax(180px,auto)]">
-        {/* Trends - Large Card with Chart and Table */}
+        {/* Financial Trends - Large Card with Chart and Table */}
         <Card className="md:col-span-3 row-span-2 shadow-lg">
           <CardHeader>
-            <CardTitle className="text-xl text-gray-700">Hiring Trends 2024</CardTitle>
+            <CardTitle className="text-xl text-gray-700">Financial Trends 2024</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col lg:flex-row gap-4">
             <div className="w-full lg:w-2/3">
               <ResponsiveContainer width="100%" height={300}>
-                <AreaChart data={trendData}>
+                <AreaChart data={financialData}>
                   <XAxis dataKey="month" />
                   <YAxis />
                   <Tooltip />
                   <Area
                     type="monotone"
-                    dataKey="applications"
+                    dataKey="revenue"
                     stroke="hsl(var(--primary))"
                     fill="hsl(var(--primary))"
                     fillOpacity={0.2}
                   />
                   <Area
                     type="monotone"
-                    dataKey="hires"
+                    dataKey="profit"
                     stroke="hsl(var(--secondary))"
                     fill="hsl(var(--secondary))"
                     fillOpacity={0.2}
@@ -234,16 +236,16 @@ export default function JobInsightsDisplay() {
                 <TableHeader>
                   <TableRow>
                     <TableHead>Month</TableHead>
-                    <TableHead>Applications</TableHead>
-                    <TableHead>Hires</TableHead>
+                    <TableHead>Revenue</TableHead>
+                    <TableHead>Profit</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {trendData.map((row) => (
+                  {financialData.map((row) => (
                     <TableRow key={row.month}>
                       <TableCell>{row.month}</TableCell>
-                      <TableCell>{row.applications}</TableCell>
-                      <TableCell>{row.hires}</TableCell>
+                      <TableCell>${row.revenue.toLocaleString()}</TableCell>
+                      <TableCell>${row.profit.toLocaleString()}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -350,7 +352,7 @@ export default function JobInsightsDisplay() {
           </CardContent>
         </Card>
       </div>
+      <Footer />
     </div>
-  )
+  );
 }
-
