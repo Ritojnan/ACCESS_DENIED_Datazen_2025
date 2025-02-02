@@ -8,7 +8,7 @@ import StockMarketReportIframe from "./pages/Stock_market_report";
 import VAEIframe from "./pages/VAE";
 import NarrativeSummaryIframe from "./pages/Narrative_generation";
 import SchemeFinder from "./pages/SchemeFinder";
-
+import ESGIframe from "./pages/ESG";
 
 function App() {
    return (
@@ -22,6 +22,7 @@ function App() {
          <Route path="/fraud" element={<VAEIframe />} />
          <Route path="/narrativesummary" element={<NarrativeSummaryIframe />} />
          <Route path="/schemefinder" element={<SchemeFinder />} />
+         <Route path="/sustainable"  element={<ESGIframe />} /> 
       </Routes>
    );
 }

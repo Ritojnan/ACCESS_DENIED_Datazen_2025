@@ -1,0 +1,52 @@
+[33mWARNING[0m:  [02-02-2025 09:10:34] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [02-02-2025 09:10:34] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [02-02-2025 09:10:34] Starting component System
+[36mDEBUG[0m:    [02-02-2025 09:10:34] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [02-02-2025 09:10:34] Starting component SqliteDB
+[36mDEBUG[0m:    [02-02-2025 09:10:34] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [02-02-2025 09:10:34] Starting component Posthog
+[36mDEBUG[0m:    [02-02-2025 09:10:34] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [02-02-2025 09:10:34] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [02-02-2025 09:10:34] Starting component LocalExecutor
+[36mDEBUG[0m:    [02-02-2025 09:10:34] Starting component SegmentAPI
+[36mDEBUG[0m:    [02-02-2025 09:10:34] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [02-02-2025 09:10:34] Started server process [[36m29840[0m]
+[32mINFO[0m:     [02-02-2025 09:10:34] Waiting for application startup.
+[32mINFO[0m:     [02-02-2025 09:10:34] Application startup complete.
+[32mINFO[0m:     [02-02-2025 09:10:34] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [02-02-2025 09:12:16] ::1:57974 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 09:12:16] ::1:57975 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 09:12:16] ::1:57975 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [02-02-2025 09:12:16] Collection chat_memory already exists, returning existing collection.
+[32mINFO[0m:     [02-02-2025 09:12:16] ::1:57974 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 09:28:19] ::1:58287 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 09:28:19] ::1:58288 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 09:28:19] ::1:58288 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [02-02-2025 09:28:19] Collection chat_memory already exists, returning existing collection.
+[32mINFO[0m:     [02-02-2025 09:28:19] ::1:58287 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 09:29:10] ::1:58331 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 09:29:10] ::1:58332 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 09:29:10] ::1:58332 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [02-02-2025 09:29:10] Collection chat_memory already exists, returning existing collection.
+[32mINFO[0m:     [02-02-2025 09:29:10] ::1:58331 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
+[33mWARNING[0m:  [02-02-2025 09:31:11] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [02-02-2025 09:31:11] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [02-02-2025 09:31:11] Starting component System
+[36mDEBUG[0m:    [02-02-2025 09:31:11] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [02-02-2025 09:31:11] Starting component SqliteDB
+[36mDEBUG[0m:    [02-02-2025 09:31:11] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [02-02-2025 09:31:11] Starting component Posthog
+[36mDEBUG[0m:    [02-02-2025 09:31:11] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [02-02-2025 09:31:11] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [02-02-2025 09:31:11] Starting component LocalExecutor
+[36mDEBUG[0m:    [02-02-2025 09:31:11] Starting component SegmentAPI
+[36mDEBUG[0m:    [02-02-2025 09:31:11] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [02-02-2025 09:31:11] Started server process [[36m14872[0m]
+[32mINFO[0m:     [02-02-2025 09:31:11] Waiting for application startup.
+[32mINFO[0m:     [02-02-2025 09:31:11] Application startup complete.
+[32mINFO[0m:     [02-02-2025 09:31:11] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [02-02-2025 09:31:38] ::1:58380 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 09:31:38] ::1:58381 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 09:31:38] ::1:58381 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [02-02-2025 09:31:38] Collection chat_memory already exists, returning existing collection.
+[32mINFO[0m:     [02-02-2025 09:31:38] ::1:58380 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
