@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/landing/footer";
 
 function App() {
   const [summaries, setSummaries] = useState([]);
@@ -21,7 +23,8 @@ function App() {
   
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+    <><Navbar />
+    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" ,marginTop: '25px',paddingTop: '55px'}}>
       <h1>📰 News Summarizer</h1>
 
       {/* Error Handling */}
@@ -53,6 +56,8 @@ function App() {
         <p>No summaries available.</p>
       )}
     </div>
+    <Footer />
+    </>
   );
 }
 

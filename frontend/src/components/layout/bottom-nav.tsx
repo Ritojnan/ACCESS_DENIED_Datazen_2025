@@ -1,14 +1,15 @@
 import { useLocation, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Home, Book, Briefcase, Mail } from "lucide-react";
+import { Home, Book, Briefcase, Mail, Newspaper,ShieldAlert,MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
-  { href: "/blog", label: "Blog", icon: Book },
-  { href: "/projects", label: "Projects", icon: Briefcase },
-  { href: "/contact", label: "Contact", icon: Mail },
+  { href: "/dashboard", label: "Dashboard", icon: Book },
+  { href: "/stockreport", label: "Stock Report", icon: Briefcase },
+  { href: "/NewsSummary", label: "News", icon: Newspaper },
+ 
 ];
 
 export function BottomNav() {

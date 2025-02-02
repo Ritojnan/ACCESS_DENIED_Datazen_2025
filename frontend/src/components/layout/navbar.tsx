@@ -20,9 +20,12 @@ export function Navbar() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/dashboard", label: "Dashboard" },
-    { href: "/news", label: "News" },
-    { href: "/report", label: "Report" },
-    { href: "/trading", label: "Trading" },
+    { href: "/NewsSummary", label: "News" },
+    { href: "/stockreport", label: "Stock Report" },
+    { href: "/fraud", label: "Fraud Detection" },
+    { href: "/chatbot", label: "Chatbot" },
+    { href: "/narrativesummary", label: "Narrative Summary" },
+    
   ];
 
   return (
