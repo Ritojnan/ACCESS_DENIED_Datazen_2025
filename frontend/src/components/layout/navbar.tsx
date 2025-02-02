@@ -19,12 +19,14 @@ export function Navbar() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/dashboard", label: "Dashboard" },
+    { href: "/narrativesummary", label: "Narrative Summary" },
     { href: "/NewsSummary", label: "News" },
     { href: "/stockreport", label: "Stock Report" },
     { href: "/fraud", label: "Fraud Detection" },
     { href: "/chatbot", label: "Chatbot" },
-    { href: "/narrativesummary", label: "Narrative Summary" },
+    { href: "/sustainable", label: "Sustainable Investing" },
+    { href: "/schemefinder", label: "Scheme Finder" },
+    { href: "/dashboard", label: "Dashboard" },
     
   ];
 

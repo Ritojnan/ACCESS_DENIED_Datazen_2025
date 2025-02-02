@@ -21,6 +21,8 @@ urls = [
     "https://www.moneycontrol.com/news/business/fm-sitharaman-says-did-not-forego-capex-for-consumption-12927464.html",
     "https://www.moneycontrol.com/budget/union-budget-allowing-to-declare-two-houses-as-self-occupied-is-a-big-tax-relief-will-boost-rental-housing-say-experts-article-12927450.html",
     "https://www.thehindubusinessline.com/markets/budget-day-market-to-open-down-indicates-gift-nifty/article69167035.ece",
+    "https://www.bbc.com/news/articles/c20myx1erl6o",
+    "https://www.bbc.com/news/articles/cdrynjz1glpo"
 
 
 ]
