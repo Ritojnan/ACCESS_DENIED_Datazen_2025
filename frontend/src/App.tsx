@@ -7,6 +7,7 @@ import ChatbotIframe from "./pages/chatBot";
 import StockMarketReportIframe from "./pages/Stock_market_report";
 import VAEIframe from "./pages/VAE";
 import NarrativeSummaryIframe from "./pages/Narrative_generation";
+import SchemeFinder from "./pages/SchemeFinder";
 
 
 function App() {
@@ -20,8 +21,7 @@ function App() {
          <Route path="/stockreport" element={<StockMarketReportIframe />} />
          <Route path="/fraud" element={<VAEIframe />} />
          <Route path="/narrativesummary" element={<NarrativeSummaryIframe />} />
-
-
+         <Route path="/schemefinder" element={<SchemeFinder />} />
       </Routes>
    );
 }
