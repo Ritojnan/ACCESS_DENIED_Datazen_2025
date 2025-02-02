@@ -26,7 +26,7 @@ def create_comparison_chart(start_value, end_value, metric_name):
         go.Bar(
             x=['Start of Year', 'End of Year'],
             y=[start_value, end_value],
-            text=[f'${start_value:,.2f}', f'${end_value:,.2f}'],
+            text=[f'₹{start_value:,.2f}', f'₹{end_value:,.2f}'],
             textposition='auto',
             marker_color=[COLOR_PALETTE[0], COLOR_PALETTE[2]]
         )
@@ -117,11 +117,11 @@ def generate_pdf_report(start_df, end_df, analysis_text):
     {analysis_text}
     
     ## Key Metrics Comparison
-    Start of Year Total Revenue: ${start_df['revenue'].sum():,.2f}
-    End of Year Total Revenue: ${end_df['revenue'].sum():,.2f}
+    Start of Year Total Revenue: ₹{start_df['revenue'].sum():,.2f}
+    End of Year Total Revenue: ₹{end_df['revenue'].sum():,.2f}
     
-    Start of Year Total Profit: ${start_df['profit'].sum():,.2f}
-    End of Year Total Profit: ${end_df['profit'].sum():,.2f}
+    Start of Year Total Profit: ₹{start_df['profit'].sum():,.2f}
+    End of Year Total Profit: ₹{end_df['profit'].sum():,.2f}
     
     ## Regional Performance
     {start_df.groupby('region')['revenue'].sum().to_markdown()}
@@ -157,15 +157,15 @@ def main():
                 Based on the following metrics, provide a comprehensive business analysis report:
                 
                 Start of Year:
-                - Revenue: ${start_df['revenue'].sum():,.2f}
-                - Profit: ${start_df['profit'].sum():,.2f}
-                - Operating Costs: ${start_df['operating_costs'].sum():,.2f}
+                - Revenue: ₹{start_df['revenue'].sum():,.2f}
+                - Profit: ₹{start_df['profit'].sum():,.2f}
+                - Operating Costs: ₹{start_df['operating_costs'].sum():,.2f}
                 - Customer Count: {start_df['customer_count'].sum():,}
                 
                 End of Year:
-                - Revenue: ${end_df['revenue'].sum():,.2f}
-                - Profit: ${end_df['profit'].sum():,.2f}
-                - Operating Costs: ${end_df['operating_costs'].sum():,.2f}
+                - Revenue: ₹{end_df['revenue'].sum():,.2f}
+                - Profit: ₹{end_df['profit'].sum():,.2f}
+                - Operating Costs: ₹{end_df['operating_costs'].sum():,.2f}
                 - Customer Count: {end_df['customer_count'].sum():,}
                 
                 Please include these as header starting with # :
@@ -251,16 +251,12 @@ def main():
         col1, col2 = st.columns(2)
         
         with col1:
-            st.plotly_chart(
-                create_scatter_plot(end_df, 'revenue', 'profit'),
-                use_container_width=True
-            )
+            scatter_fig = create_scatter_plot(end_df, 'revenue', 'profit')
+            st.plotly_chart(scatter_fig, use_container_width=True)
         
         with col2:
-            st.plotly_chart(
-                create_scatter_plot(end_df, 'customer_count', 'revenue'),
-                use_container_width=True
-            )
+            scatter_fig = create_scatter_plot(end_df, 'customer_count', 'revenue')
+            st.plotly_chart(scatter_fig, use_container_width=True)
         
         # Detailed Metrics Table
         st.header("Detailed Metrics Comparison")
