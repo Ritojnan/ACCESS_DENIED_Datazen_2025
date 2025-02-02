@@ -24,6 +24,7 @@ export function Navbar() {
     { href: "/stockreport", label: "Stock Report" },
     { href: "/fraud", label: "Fraud Detection" },
     { href: "/chatbot", label: "Chatbot" },
+    { href: "/narrativesummary", label: "Narrative Summary" },
     
   ];
 
