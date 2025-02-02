@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import io
 
 def preprocess_data(df):
     df = df.dropna(how='all')
@@ -9,24 +7,8 @@ def preprocess_data(df):
     df = df.fillna("Missing")
     df = df.drop_duplicates()
     df.columns = df.columns.str.lower().str.strip().str.replace(' ', '_')
+    
     return df
-
-def df_to_image(df):
-    fig, ax = plt.subplots(figsize=(12, len(df) * 0.5 + 1))
-    ax.axis('off')  # Hide axes
-
-    # Render the table using Matplotlib
-    table = ax.table(cellText=df.values, colLabels=df.columns, cellLoc='center', loc='center')
-    table.auto_set_font_size(False)
-    table.set_fontsize(10)
-    table.auto_set_column_width(range(len(df.columns)))
-
-    # Save the image to a buffer
-    buf = io.BytesIO()
-    plt.savefig(buf, format='png', bbox_inches='tight')
-    buf.seek(0)
-    plt.close(fig)
-    return buf
 
 st.title("Excel File Processor and Markdown Converter (Supports .xls and .xlsx)")
 
@@ -37,13 +19,30 @@ if uploaded_file:
     st.write("### Sheets Found:")
     st.write(list(sheets.keys()))
     processed_books = {}
-
+    
     for sheet_name, df in sheets.items():
         processed_df = preprocess_data(df)
         processed_books[sheet_name] = processed_df
         st.subheader(f"Processed Data from '{sheet_name}'")
         st.write(processed_df)
-
-        # Convert and display the table as an image
-        image_buffer = df_to_image(processed_df)
-        st.image(image_buffer, caption=f"Table Image from '{sheet_name}'")
+        
+        # Convert DataFrame to Markdown
+        # markdown_output = processed_df.to_markdown(index=False)
+        
+        # st.text_area(f"Markdown Content for '{sheet_name}'", markdown_output, height=300)
+        
+        # Download Markdown as File
+        # st.download_button(
+        #     f"Download Processed '{sheet_name}' as Markdown",
+        #     markdown_output,
+        #     f"{sheet_name}_processed.md",
+        #     "text/markdown"
+        # )
+        
+        # # CSV download for compatibility
+        # st.download_button(
+        #     f"Download Processed '{sheet_name}' as CSV",
+        #     processed_df.to_csv(index=False).encode('utf-8'),
+        #     f"{sheet_name}_processed.csv",
+        #     "text/csv"
+        # )
