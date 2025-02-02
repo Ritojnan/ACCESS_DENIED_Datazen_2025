@@ -50,3 +50,17 @@
 [32mINFO[0m:     [02-02-2025 09:31:38] ::1:58381 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
 [36mDEBUG[0m:    [02-02-2025 09:31:38] Collection chat_memory already exists, returning existing collection.
 [32mINFO[0m:     [02-02-2025 09:31:38] ::1:58380 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
+[32mINFO[0m:     [02-02-2025 11:11:40] Shutting down
+[32mINFO[0m:     [02-02-2025 11:11:40] Waiting for application shutdown.
+[36mDEBUG[0m:    [02-02-2025 11:11:40] Stopping component System
+[36mDEBUG[0m:    [02-02-2025 11:11:40] Stopping component SegmentAPI
+[36mDEBUG[0m:    [02-02-2025 11:11:40] Stopping component LocalExecutor
+[36mDEBUG[0m:    [02-02-2025 11:11:40] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [02-02-2025 11:11:40] Stopping component SimpleAsyncRateLimitEnforcer
+[36mDEBUG[0m:    [02-02-2025 11:11:40] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [02-02-2025 11:11:40] Stopping component Posthog
+[36mDEBUG[0m:    [02-02-2025 11:11:40] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [02-02-2025 11:11:40] Stopping component SqliteDB
+[36mDEBUG[0m:    [02-02-2025 11:11:40] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [02-02-2025 11:11:40] Application shutdown complete.
+[32mINFO[0m:     [02-02-2025 11:11:40] Finished server process [[36m14872[0m]
