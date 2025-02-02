@@ -4,6 +4,9 @@ import JobInsightsDisplay from "./pages/insights";
 import Landing from "./pages/landing";
 import NewsSummary from "./pages/News_summary"
 import ChatbotIframe from "./pages/chatBot";
+import StockMarketReportIframe from "./pages/Stock_market_report";
+import VAEIframe from "./pages/VAE";
+import NarrativeSummaryIframe from "./pages/Narrative_generation";
 
 
 function App() {
@@ -14,6 +17,11 @@ function App() {
          <Route path="/dashboard" element={<JobInsightsDisplay />} />
          <Route path="/NewsSummary" element={<NewsSummary />} />
          <Route path="/chatbot" element={<ChatbotIframe />} />
+         <Route path="/stockreport" element={<StockMarketReportIframe />} />
+         <Route path="/fraud" element={<VAEIframe />} />
+         <Route path="/narrativesummary" element={<NarrativeSummaryIframe />} />
+
+
       </Routes>
    );
 }
